@@ -1,0 +1,25 @@
+image{
+  height: 60rpx;
+  width: 60rpx;
+  display: inline-block
+}
+textarea {
+  padding: 20rpx;
+  color: #666;
+  font-size: 36rpx;
+  min-height: 200rpx;
+  margin-bottom: 20rpx;
+}
+button {
+  margin: 10rpx 20rpx;
+}
+.text {
+  margin: 60rpx 0 10rpx 0;
+  text-align: center;
+  color: #999;
+}
+.stars {
+  text-align: center;
+  padding: 40rpx;
+  border-bottom: 1px solid #eee;
+}

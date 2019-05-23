@@ -1,0 +1,53 @@
+@include b(upload-img) {
+  @include e(wrap) {
+    position: relative;
+    width: 500px;
+    height: 102px;
+    background-color: #F7F8F9;
+    border: 1px solid $default-border-color;
+    border-radius: $border-raduis-width;
+    .el-progress {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .el-progress-circle {
+      width: 80px !important;
+      height: 80px !important;
+    }
+  }
+  @include e(tips) {
+    line-height: 22px;
+    font-size: .6rem;
+    color: #999;
+  }
+  @include e(icon) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    width: 32px;
+    height: 28px;
+    margin-top: -14px;
+    margin-left: -16px;
+    .icon {
+      font-size: 36px;
+      color: #999;
+    }
+  }
+  @include e(img) {
+    display: block;
+    width: 500px;
+    height: 102px;
+    border-radius: $border-raduis-width;
+  }
+  @include e(close) {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: .6rem;
+    line-height: 1px;
+    cursor: pointer;
+  }
+}

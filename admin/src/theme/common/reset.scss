@@ -1,0 +1,44 @@
+/** ============
+  * 默认样式重置
+  * ============
+  *
+  */
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  td {
+    word-break: break-all;
+  }
+}
+
+h1, p {
+  margin: 0;
+}
+input, button, select, textarea {
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+}

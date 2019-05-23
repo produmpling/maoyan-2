@@ -1,0 +1,32 @@
+@include b(header) {
+  height:60px;
+  line-height: 60px;
+  font-size: 12px;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 2px 6px 0px rgba(229,229,229,0.5);
+  @include clear;
+
+  @include m(right) {
+    float: right;
+    display: flex;
+  }
+
+  @include e(personal) {
+    margin-left: 30px;
+    color: #666;
+    cursor: pointer;
+  }
+}
+
+@include b(logo) {
+  float: left;
+  width: 230px;
+  height: 60px;
+  font-weight: 400;
+  img {
+    max-height: 60px;
+  }
+  .icon {
+    font-size: 24px;
+  }
+}

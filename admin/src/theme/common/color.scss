@@ -1,0 +1,30 @@
+/** ============
+  * 全局公共颜色样式
+  * ============
+  *
+  */
+$primary: #409eff;
+$success: #6BC06F;
+$warning: #FFAD1C;
+$danger: #f56c6c;
+$info: #666;
+
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+.text-primary {
+  color: $primary;
+}
+.text-success {
+  color: $success;
+}
+.text-warning {
+  color: $warning;
+}
+.text-danger {
+  color: $danger;
+}
+.text-info {
+  color: $info;
+}

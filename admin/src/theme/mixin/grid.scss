@@ -1,0 +1,55 @@
+/** ============
+  * 网格系统
+  * ============
+  *
+  */
+.xg-row {
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: -5px;
+  margin-right: -5px;
+  @include clear;
+}
+
+@for $i from 1 through 12 {
+  .xg-col-#{$i} {
+    box-sizing: border-box;
+    position: relative;
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .xg-col-#{$i} {
+    width: $i / 12 * 100%;
+    float: left;
+  }
+
+  .xg-col-offset-#{$i} {
+    margin-left: $i / 12 * 100%;
+  }
+
+  // 小屏幕
+  @include smScreen {
+    .xg-col-sm-#{$i} {
+      width: $i / 12 * 100%;
+      float: left;
+    }
+  }
+
+  // 中等屏幕
+  @include mdScreen {
+    .xg-col-md-#{$i} {
+      width: $i / 12 * 100%;
+      float: left;
+    }
+  }
+
+  // 大屏幕
+  @include lgScreen {
+    .xg-col-lg-#{$i} {
+      width: $i / 12 * 100%;
+      float: left;
+    }
+  }
+}

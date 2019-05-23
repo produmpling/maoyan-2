@@ -1,0 +1,103 @@
+/** ============
+  * 全局公共变量名
+  * ============
+  *
+  */
+/* header高度 */
+$header-height: 50px;
+$leftbar-width: 200px;
+$leftbar-width-min: 60px;
+$leftbar-bgcolor: #263238;
+$leftbar-menu-bgcolor: #2c3b41;
+$leftbar-btn-bgcolor: #263238;
+$tabs-height: 40px;
+$footer-height: 40px;
+
+$transition-time: .3s;
+$transition-collapse-time: .5s;
+
+/* 颜色设置 */
+// $color-primary: #2a579a;
+// $color-primary-active: #5587a5;
+$color-primary: #409eff;
+$color-primary-light: #F2F6FC;
+$color-primary-active: #b57a3a;
+$color-primary-2: #333;
+$color-primary-light-2: #666;
+$color-primary-active-2: #666;
+$color-success: #6BC06F;
+$color-success-active: #449d44;
+$color-warning: #FFAD1C;
+$color-warning-active: #FFAD1C;
+$color-danger: #f56c6c;
+$color-danger-active: #d53e3a;
+$color-info: #5bc0de;
+$color-info-active: #31b0d5;
+$color-gray: #666;
+$color-light-gray: #999;
+
+/* 内容区大小 */
+$min-width: 60rem;
+$max-width: 60rem;
+/* 屏幕大小设置 */
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+/* 字体设置 */
+$ft-en: -apple-system-font, 'Helvetica Neue';
+$ft-cn: 'PingFang SC', 'Arial', 'Microsoft YaHei', 'Hiragino Sans GB';
+$ft-sans: sans-serif;
+$ft-default: $ft-cn, $ft-en, $ft-sans;
+/* 字体大小 */
+$fs-small: .6rem;
+$fs-normal: .7rem;
+$fs-large: .8rem;
+$fs-xl: .9rem;
+$fs-xxl: 1.5rem;
+/* 默认字体颜色 */
+$default-ft-color: #333;
+$disabled-ft-color: #999;
+$placeholder-ft-color: #999;
+$nav-ft-color: #666;
+
+
+/* 阴影、边框色、圆角大小、padding大小等 */
+$default-box-shadow: 1px 0 10px rgba(0, 0, 0, .1);
+$default-border-color: #eee;
+$border-color: #e7eaec;
+$border-hover-color: #c0c4cc;
+$border-raduis-width: 5px;
+$default-padding: 10px;
+/* 区块间的margin值 */
+$default-margin: 20px;
+
+/** ============
+  * 全局公共颜色样式
+  * ============
+  *
+  */
+$primary: #409eff;
+$success: #6BC06F;
+$warning: #FFAD1C;
+$danger: #f56c6c;
+$info: #666;
+
+/* 课表 */
+$scheduleTitBgColor: #f5f5f5;
+$scheduleBorderColor: #f1f1f1;
+$forbiddenBgColor: rgba(199, 199, 199, 0.5);
+$fixedBgColor: rgb(255, 207, 45);
+$canSelectBgColor: rgb(136, 222, 136);
+$isSelectedBgColor: rgb(255, 207, 45);
+$colorFontLightGray: #999;
+$borderColor: #e5e5e5;
+
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+
+
+
+

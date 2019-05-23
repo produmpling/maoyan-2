@@ -1,0 +1,55 @@
+<view class="head">
+  <view class="shop">
+    <view class="name">{{shop.name}}</view>
+    <view class="adress">{{shop.location}}</view>
+  </view>
+  <view class="map">
+    <view class="line"></view>
+    <view class="map-wrap" bindtap="openMap">
+      <image src="http://localhost:3000/img/icon/mapmark.png" style="width:36rpx;height:36rpx;"></image>
+      <view class="map-let">地图</view>
+    </view>
+  </view>
+</view>
+<view class="select">
+  <scroll-view scroll-x class="movies" style="height:280rpx;">
+    <view wx:for="{{scrollMovies}}" class="movies-item" bindtap="tapselect" id="{{index}}">
+      <image src="{{item.cover}}" class="movies-pic {{activeindex==index?'movies-pic-active':''}}"></image>
+    </view>
+  </scroll-view>
+  <image src="{{imgUrl}}" style="width:100%;height:280rpx;" class="backImg"></image>
+</view>
+<view class="bottom">
+  <view class="t-movie">
+    <view class="t-tr">
+      <view class="t-title">{{activemovie.name}}</view>
+      <view class="t-rating">{{activemovie.rating}}分</view>
+    </view>
+    <view class="t-jiamjie">{{activemovie.summary}}</view>
+  </view>
+  <view>
+    <view class="selectDate">
+      <view wx:for="{{threedays}}" id="{{index}}" class="oneday {{activeDateIndex==index?'activeday':''}}" bindtap="selectDate" data-date="{{item.date}}">{{item.text}}</view>
+    </view>
+    <view class="times">
+      <navigator url="./seat/seat?movie_id={{active_movie_id}}&movie_name={{activemovie.name}}&theater_name={{shop.name}}&theater_id={{theater_id}}&date={{theday}}&start_time={{item.start_time}}&effects={{item.effects}}&room={{item.room}}&price={{item.price}}" class="time" wx:for="{{activemovie.times}}">
+        <view class="">
+          <view class="start">{{item.start_time}}</view>
+          <view class="glr">{{item.end_time}}散场</view>
+        </view>
+        <view class="eg">
+          <view class="effects">{{item.effects}}</view>
+          <view class="glr room">{{item.room}}观影厅</view>
+        </view>
+        <view class="pg">
+          <view class="pd">
+            <view class="price"> <text class="priceF">{{item.price}}</text><text class="priceL">元</text></view>
+          </view>
+        </view>
+        <view class="btickets">
+          购票
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

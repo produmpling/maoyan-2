@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/movies/index",
+    "pages/theater/logs",
+    "pages/profile/profile",
+    "pages/movies/position/position",
+    "pages/movies/detail/detail",
+    "pages/movies/comment/comment",
+    "pages/theaterList/theaterList",
+    "pages/search/search",
+    "pages/search/indexsearch/indexsearch",
+    "pages/shop/shop",
+    "pages/shop/map/map",
+    "pages/shop/seat/seat",
+    "pages/book/book",
+    "pages/book/code/code",
+    "pages/profile/order/order",
+    "pages/profile/saw/saw"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于获取附近的电影院"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#D43E37",
+    "navigationBarTitleText": "影票多多"
+  },
+  "tabBar": {
+    "color": "#6A6767",
+    "selectedColor": "#D74D4C",
+    "backgroundColor": "#F5F5F5",
+    "list": [
+      {
+        "pagePath": "pages/movies/index",
+        "text": "电影",
+        "iconPath": "img/tab/1.png",
+        "selectedIconPath": "img/tab/1s.png"
+      },
+      {
+        "pagePath": "pages/theater/logs",
+        "text": "影院",
+        "iconPath": "img/tab/2.png",
+        "selectedIconPath": "img/tab/2s.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "img/tab/4.png",
+        "selectedIconPath": "img/tab/4s.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

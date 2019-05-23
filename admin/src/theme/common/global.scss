@@ -1,0 +1,156 @@
+/** ============
+  * 全局公共样式
+  * ============
+  *
+  */
+
+/** 全局设置 */
+html {
+  font-size: 20px;
+}
+body {
+  position: relative;
+  font-family: $ft-default;
+  font-size: $fs-normal;
+  color: $default-ft-color;
+  background-color: $color-primary-light;
+  //overflow: hidden;
+}
+input,
+textarea {
+  font-family: $ft-default;
+}
+
+/** .l-: 布局(layouts) */
+/** top-right-bottom-left */
+/** top */
+.g-mt10- {
+  margin-top: -10px;
+}
+.g-mt10 {
+  margin-top: 10px;
+}
+.g-mt20 {
+  margin-top: 20px;
+}
+.g-mt40- {
+  margin-top: -40px;
+}
+.g-mt50 {
+  margin: 50px;
+}
+.g-mt50- {
+  margin-top: -50px;
+}
+/** right */
+.g-mr5 {
+  margin-right: 5px;
+}
+.g-mr10 {
+  margin-right: 10px;
+}
+.g-mr20 {
+  margin-right: 20px;
+}
+/** bottom */
+.g-mb10 {
+  margin-bottom: 10px;
+}
+.g-mb20 {
+  margin-bottom: 20px;
+}
+/** left */
+.g-ml5 {
+  margin-left: 5px;
+}
+.g-ml10 {
+  margin-left: 10px;
+}
+.g-ml10- {
+  margin-left: -10px;
+}
+.g-ml15 {
+  margin-left: 15px;
+}
+.g-ml20 {
+  margin-left: 20px;
+}
+.g-mr5 {
+  margin-right: 5px;
+}
+.g-mr8 {
+  margin-right: 8px;
+}
+.g-mr10 {
+  margin-right: 10px;
+}
+.g-mr15 {
+  margin-right: 15px;
+}
+/** others */
+.l-fr {
+  float: right;
+}
+.l-fl {
+  float: left;
+}
+.l-flex {
+  display: flex;
+}
+.xg-wrap {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.xg-container {
+  padding: 0 0 0 25px;
+  flex: 1;
+}
+.xg-main {
+  // padding: 0 0 0 25px;
+  flex: 1;
+  background-color: #fff;
+  box-shadow: 0px 2px 6px 0px rgba(229, 229, 229, 0.5);
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  // margin-bottom: 5px;
+  background-color: #eeeeee;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  //box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  background-color: #fff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #eeeeee;
+  &:hover{
+    background: #DDD;
+  }
+}
+
+// 字体
+.icon {
+  &.iconfont {
+    outline: none;
+    &.icon-ellipsis {
+      cursor: pointer;
+      font-size: 28px;
+      font-weight: bold;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

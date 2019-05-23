@@ -1,0 +1,29 @@
+<template name="theaterList">
+  <view wx:for="{{list.theaters}}" >
+    <navigator url="../shop/shop?theater_id={{item.id}}&movie_id={{list.movie_id}}&date={{list.selectedDate}}" class="theater">
+      <view class="shop">
+        <view class="theName">{{item.name}}</view>
+        <view class="lower">
+          <text class="lowerN">{{item.min_price}}</text>
+          <text class="lowerL">元起</text>
+        </view>
+      </view>
+      <view class="adress">{{item.location}}</view>
+      <view class="tips">
+        <view wx:for="{{item.labels}}" class="blue tipC">{{item}}</view>
+      </view>
+      <view class=" des" wx:if="{{item.hui}}">
+        <view class="huiL letter">惠</view>
+        <view>{{item.hui}}</view>
+      </view>
+      <view class=" des" wx:if="{{item.ka}}">
+        <view class="kaL letter">卡</view>
+        <view>{{item.ka}}</view>
+      </view>
+      <view class="times" wx:if="{{item.times}}">
+        <view>近期场次:</view>
+        <view wx:for="{{item.times}}" class="timesItem">{{item.start_time}}</view>
+      </view>
+    </navigator>
+  </view>
+</template>

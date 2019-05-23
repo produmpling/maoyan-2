@@ -1,0 +1,24 @@
+/** ============
+  * 表单样式
+  * ============
+  *
+  */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  font-size: 13px;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  font-size: 13px;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  font-size: 13px;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  font-size: 13px;
+}

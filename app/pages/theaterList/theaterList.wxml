@@ -1,0 +1,9 @@
+<import src="../../common/template/theaterList.wxml" />
+<view class="head">
+  <scroll-view scroll-x class="scroll-H">
+    <view wx:for="{{weekday}}" wx:key="*this" catchtap="handleDateSelected" class="scroll-H-item {{activeDateIndex==index? 'active':''}}" data-date="{{item.date}}" id="{{index}}">{{item.text}}</view>
+  </scroll-view>
+</view>
+<view class="body">
+  <template is="theaterList" data="{{list}}" />
+</view>

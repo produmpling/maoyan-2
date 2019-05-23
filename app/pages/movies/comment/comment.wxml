@@ -1,0 +1,14 @@
+<view class="text" wx:if="{{one_2}}">{{one_2}}分</view>
+<view class="text" wx:else>期待你的打分</view>
+<view class="stars">
+  <block wx:for="{{one_2}}" wx:key="index">
+    <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc2' src='/img/photo/i-stars.png'></image>
+  </block>
+  <block wx:for="{{two_2}}" wx:key="index">
+    <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc' src='/img/photo/i-star.png'></image>
+  </block>
+</view>
+<form bindsubmit="bindFormSubmit">
+  <textarea auto-height name="textarea" placeholder="请输入影评" />
+  <button form-type="submit">提交</button>
+</form>

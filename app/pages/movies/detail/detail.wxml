@@ -1,0 +1,83 @@
+<image src="{{detail.movie.cover}}" class="filter"></image>
+<view class="head">
+  <view class="cover">
+    <navigator url="" class="playUrl">
+      <image src="{{detail.movie.cover}}" style="width:212rpx;height:290rpx;"></image>
+    </navigator>
+    <view class="jianjie">
+      <view>
+        <view class="mTitle">{{detail.movie.name}}</view>
+        <view class="enName">{{detail.movie.en_name}}</view>
+      </view>
+      <view class="rater">
+        <view class="space">
+          <view class="subject">评分 <text class="rateN">{{detail.movie.rating}}</text> <text class="rateP">({{detail.comments.length}}人测)</text></view>
+        </view>
+      </view>
+      <view>
+        <view class="area">
+          {{detail.movie.types}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="control">
+    <view class="islooked like" catchtap="like">{{isLikedText}}</view>
+    <navigator url="../comment/comment?movie_id={{detail.movie.id}}" class="like">评分</navigator>
+  </view>
+</view>
+<view catchtap="flex">
+  <view class="plot {{flexed?'':'flex'}}">{{detail.movie.description}}</view>
+  <view class="arrow {{flexed?'uparrow':'downarrow'}}"></view>
+</view>
+<view class="warp" style="height:346rpx;">
+  <view class="tBar">演职人员</view>
+  <scroll-view scroll-x style="width:100%">
+    <view class="actorLi">
+      <view wx:for="{{detail.actors}}" class="acItem">
+        <image src="{{item.avatar}}" style="width:134rpx;height:172rpx;margin-bottom:18rpx;"></image>
+        <view class="textOver">{{item.name}}</view>
+        <view style="color:#9B9B9B;" class="textOver">{{item.role}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class="warp" style="height:278rpx;">
+  <view class="tBar">
+    <view>视频和剧照</view>
+    <view class="videoN">{{detail.stills.length}}</view>
+  </view>
+  <scroll-view scroll-x class="scr-H">
+    <view class="spa scr-H-item"></view>
+    <block class="img-item scr-H-item" url="" wx:for="{{detail.stills}}" hover-class="none">
+      <image bindtap="previewStill" data-src="{{detail.stills}}" src="{{item.image}}" class="{{index==0?'long':'short'}}"></image>
+    </block>
+    <view class="spa scr-H-item"></view>
+  </scroll-view>
+</view>
+<view class="audience">
+  <view class="mark-head">
+    <view class="au-mark">观众评论</view>
+  </view>
+  <view>
+    <view wx:for="{{detail.comments}}" class="audience-item">
+      <view class="avatarUrl">
+        <image src="{{item.avatar}}" style="width:58rpx;height:58rpx; border-radius: 50%;"></image>
+      </view>
+      <view class="audienceD">
+        <view>
+          <view class="nickName">{{item.nick_name}}</view>
+          <view></view>
+        </view>
+        <view class="pWord">{{item.content}}</view>
+        <view class="dToa">
+          <view>{{item.comments_created_at}}</view>
+          <view style="margin-right:36rpx;color:orange">评了{{item.comments_rating}}分</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <navigator url=""></navigator>
+</view>
+<navigator url="../../theaterList/theaterList?title={{detail.movie.name}}&id={{detail.movie.id}}" class="buy">优惠购票</navigator>
+<view style="height:100px;"></view>

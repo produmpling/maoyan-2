@@ -1,0 +1,10 @@
+@include b(norecord) {
+  min-width: 250px;
+  margin: 50px auto;
+  box-sizing: border-box;
+  @include e(tips) {
+    font-size: $fs-normal;
+    line-height: 20px;
+    text-align: center;
+  }
+}

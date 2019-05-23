@@ -1,0 +1,24 @@
+<block wx:for="{{favorites}}">
+<navigator url="../../movies/detail/detail?id={{item.movie_id}}">
+  <view style="height:216rpx;" class="movie">
+    <image src="{{item.cover}}" style="height:172rpx;width:122rpx;"></image>
+    <view class="intro-warp">
+      <view style="font-size:12px" class="intro">
+        <view style="font-size:30rpx; color:#222222">{{item.name}}</view>
+        <view style="font-size:24rpx; color:#686868">{{item.types}}</view>
+        <view style="font-size:24rpx;white-space:nowrap;text-overflow:ellipsis;overflow:hidden; color:#686868">{{item.actors}}</view>
+      </view>
+      <view class="buy">
+        <view class="rating" wx:if="{{item.onsale}}">
+          <text>{{item.rating}}</text>
+          <text style="font-size:18rpx;">分</text>
+        </view>
+        <view class="rating">
+          <text>{{item.likes}}</text>
+          <text style="font-size:18rpx;">人想看</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</navigator>
+</block>

@@ -1,0 +1,19 @@
+<button class="login" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+<view class="user-avatar">
+  <open-data type="userAvatarUrl"></open-data>
+</view>
+<view class="warp">
+  <view class="item">
+  <navigator class="navigator" url="./order/order">
+    我的订单
+  </navigator>
+  </view>
+</view>
+<view class="warp">
+  <view class="item">
+  <navigator class="navigator" url="./saw/saw">
+  想看的电影
+  </navigator>
+  </view>
+</view>
+<view></view>

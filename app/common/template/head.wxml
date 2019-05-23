@@ -1,0 +1,17 @@
+<template name="head">
+<view class="head">
+  <navigator url="./position/position?city={{currentCity}}" class="selpoi" hover-class="none">
+    <view class="selcity">
+      <view>{{currentCity}}</view>
+      <view class="navigator-arrow"></view>
+    </view>
+  </navigator>
+  <view class="search-rad">
+    <view class="input-wrap">
+      <icon type="search" size="14"></icon>
+      <input class="input" placeholder="请输入关键字" placeholder-class="placeholderclass" bindinput="searchinput" />
+    </view>
+    <navigator url="../movies/index" class="cancel" open-type="switchTab">取消</navigator>
+  </view>
+</view>
+</template>

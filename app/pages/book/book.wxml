@@ -1,0 +1,12 @@
+<view class="book">
+  <view>时间：{{date}}  {{start_time}}</view>
+  <view>影院：{{theater_name}}</view>
+  <view>影片：{{movie_name}}</view>
+  <view>座位：{{room}}厅{{seats}}</view>
+  <view class="total">
+    <text>总价</text>
+    <text style="color: red">{{price}}元</text>
+  </view>
+  <button wx:if="{{status==2}}" catchtap="getCode">获取取票码</button>
+  <button wx:else catchtap="pay">支付</button>
+</view>

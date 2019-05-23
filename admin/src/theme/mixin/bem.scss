@@ -1,0 +1,81 @@
+/** ============
+  * BEM规范
+  * ============
+  *
+  */
+
+@import './config.scss';
+@import './func.scss';
+
+
+/**
+  * Block——块
+  * 1.块即是通常所说的 Web 应用开发中的组件或模块。
+  * 2.每个块在逻辑上和功能上都是相互独立的。
+  * 3.块中封装了组件相关的 JavaScript、CSS 代码和 HTML 模板。
+  * 4.由于块是独立的，可以在应用开发中进行复用，从而降低代码重复并提高开发效率。
+  * 5.块可以放置在页面上的任何位置，也可以互相嵌套。
+  * 如.xg-separator
+  */
+@mixin b($block) {
+  $B: $namespace + '-' + $block;
+  // xg-login
+  /** at-root跳出选择器嵌套 **/
+  @at-root .#{$B} {
+    @content;
+  }
+}
+
+/**
+  * Element——元素
+  * 1.元素是块中的组成部分。
+  * 2.元素不能离开块来使用。
+  * 3.BEM 不推荐在元素中嵌套其他元素。
+  * 如.xg-separator__element
+  */
+@mixin e($element) {
+  $E: $element-separator + $element !global;
+  $selector: &;  // & 可以取到父选择器类名
+
+  @if containSpecialLabel($selector) {
+    $currentSelector: #{extractBlock($selector) + $element-separator + $element };
+
+    @at-root #{$selector}{
+      #{$currentSelector} {
+        @content;
+      }
+    }
+  }
+  @else {
+    @at-root &#{$E} {
+      @content;
+    }
+  }
+}
+
+/**
+  * Modifier——修饰符
+  * 1.修饰符用来定义块或元素的外观和行为。
+  * 2.同样的块或元素在应用不同的修饰符之后，会有不同的外观。
+  * 如.xg-separator__element--modifier
+  */
+@mixin m($modifier) {
+  $M: $modifier-separator + $modifier;
+
+  @at-root #{&}#{$M} {
+    @content;
+  }
+}
+
+/**
+  * is——状态判断
+  * 如.xg-separator.is-state
+  */
+@mixin when($state) {
+  $S: $state-prefix + $state;
+
+  @at-root #{&}.#{$S} {
+    @content;
+  }
+}
+
